@@ -1,0 +1,92 @@
+\documentclass[10pt, t, aspectratio=169, usepdftitle=true, xcolor=dvipsnames]{beamer} 
+
+
+\def\withanim{0}
+
+%%-----------------------------------------------------------------------
+%% Preambule: Packages and command definitions
+%%-----------------------------------------------------------------------
+
+
+%% Logos
+\newcommand{\logoHeader}{images/mines-vert.png}
+\newcommand{\logoTitle}{\vspace{-3em}
+	\includegraphics[width=20em]{images/mines.png}}
+
+%% Preambule
+\input{preambule.tex}
+
+
+% Grey out items
+\setbeamercovered{still covered={\opaqueness<1->{0}},again covered={\opaqueness<1->{60}}}
+
+
+%%-----------------------------------------------------------------------
+%% Presentation characteristics
+%%-----------------------------------------------------------------------
+
+% Title 
+\title{Main Title}
+\subtitle{Main Subtitle}
+
+
+% Authors
+\author[Léo Roux]{\textbf{Léo Roux}}
+
+% Institute
+\institute{Collège des Sciences Navales \\
+	\texttt{leo.roux@etu.minesparis.psl.eu} \\
+	\vspace{1em}
+}
+
+% Event
+\date{May 15th, 2026}
+
+
+%%-----------------------------------------------------------------------
+%%----------------------------------------------------------------------
+
+
+\begin{document}
+	
+	% Equations
+	\setlength{\abovedisplayskip}{0.75ex}
+	\setlength{\belowdisplayskip}{0.75ex}
+	
+	%%----------------------------------------------------------------------
+	
+	\begin{frame}[plain,c]
+		\titlepage\ 
+	\end{frame}
+		
+	%%-------------------------- Outline frame before each section
+	% \AtBeginSection[]{
+	% 	\begin{frame}
+	% 		\frametitle{Outline}
+	% 		\tableofcontents[currentsection]
+	% 	\end{frame} 
+	% }
+	
+	% \AtBeginSubsection[]{
+	% 	\begin{frame}
+	% 		\frametitle{Outline}
+	% 		\tableofcontents[currentsubsection]
+	% 	\end{frame} 
+	% }
+	%%--------------------------
+	
+	
+	%%---------------------------  CONTENT  --------------------------------
+	%%----------------------------------------------------------------------
+	
+
+	\input{sections/section1.tex}	
+	% \input{sections/section2.tex}
+	
+	%%---------------------------  APPENDIX  --------------------------------
+	%%----------------------------------------------------------------------
+	
+	\input{sections/appendix.tex}
+
+	
+\end{document}

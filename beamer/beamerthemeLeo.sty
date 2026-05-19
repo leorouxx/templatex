@@ -1,0 +1,49 @@
+\ProvidesPackage{beamerthemeLeo}[2026/05/18 Custom Minimal Beamer Theme]
+
+% -------------------------------------------------------------
+% 1. DEFINE YOUR CUSTOM COLORS (RGB format)
+% -------------------------------------------------------------
+\definecolor{MyPrimary}{RGB}{38, 52, 94}     % A deep blue
+\definecolor{MySecondary}{RGB}{176, 183, 200}   % A vibrant coral
+\definecolor{MyDarkText}{RGB}{40, 40, 40}          % Soft black for text
+
+\definecolor{MyMainBG}{RGB}{249, 249, 255}        % Off-white for backgrounds
+\definecolor{MyElementsBG}{RGB}{217, 230, 247}        % Off-white for backgrounds
+
+% -------------------------------------------------------------
+% 2. APPLY COLORS TO BEAMER ELEMENTS
+% -------------------------------------------------------------
+% Global structure (defaults for itemize bullets, section names, etc.)
+\setbeamercolor{structure}{fg=MyPrimary}
+
+% Normal body text
+\setbeamercolor{normal text}{fg=MyDarkText, bg=MyMainBG}
+
+% Title Slide elements
+\setbeamercolor{title}{fg=white, bg=MyPrimary}
+\setbeamercolor{subtitle}{fg=MySecondary}
+\setbeamercolor{author}{fg=MyPrimary}
+
+% Frame Headers
+\setbeamercolor{frametitle}{fg=white}
+
+% Force Beamer to draw a solid colored background block for the banner
+\setbeamercolor{frametitle}{fg=white, bg=MyPrimary}
+\setbeamertemplate{frametitle}{
+    \nointerlineskip % Removes gaps between top of slide and banner
+    \begin{beamercolorbox}[wd=\paperwidth, ht=2.8ex, dp=1.1ex, leftskip=1cm]{frametitle}
+        \usebeamerfont{frametitle}\insertframetitle
+    \end{beamercolorbox}
+}
+
+% Blocks (Theorem, Example, etc.)
+\setbeamercolor{block title}{fg=white, bg=MyPrimary}
+\setbeamercolor{block body}{fg=MyDarkText, bg=MyElementsBG}
+
+% -------------------------------------------------------------
+% 3. ADDITIONAL MINIMAL LAYOUT SETTINGS
+% -------------------------------------------------------------
+\setbeamertemplate{navigation symbols}{} % Removes the tiny navigation icons
+\setbeamertemplate{footline}[frame number] % Adds simple page numbering
+
+\endinput
